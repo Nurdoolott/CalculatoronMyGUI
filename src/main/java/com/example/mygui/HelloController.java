@@ -10,50 +10,19 @@ public class HelloController {
     @FXML
     private TextField inputField;
 
-    @FXML
-    protected void onPlusB(){
-        calc.setOperator('+');
-        String val=inputField.getText();
-        double d=Double.parseDouble(val);
-        calc.setOp1(d);
-        inputField.setText("");
-    }
 
-    @FXML
-    protected void onMinusB(){
-        calc.setOperator('-');
-        String val=inputField.getText();
-        double d=Double.parseDouble(val);
-        calc.setOp1(d);
-        inputField.setText("");
-    }
-
-    @FXML
-    protected void onDivisionB(){
-        calc.setOperator('/');
-        String val=inputField.getText();
-        double d=Double.parseDouble(val);
-        calc.setOp1(d);
-        inputField.setText("");
-    }
-
-    @FXML
-    protected void onMultiplyB(){
-        calc.setOperator('*');
-        String val=inputField.getText();
-        double d=Double.parseDouble(val);
-        calc.setOp1(d);
-        inputField.setText("");
-    }
 
     @FXML
     protected void onEqualB(){
-        String val=inputField.getText();
-        double d=Double.parseDouble(val);
-        calc.setOp2(d);
-        calc.calculate();
-        d=calc.getResult();
-        inputField.setText(Double.toString(d));
+        calc.setOp2(Double.parseDouble(inputField.getText()));
+
+        try {
+            calc.calculate();
+            double result = calc.getResult();
+            inputField.setText(Double.toString(result));
+        } catch (DivisionByZeroEx e) {
+            inputField.setText("Error: " + e.getMessage());
+        }
     }
 
 
@@ -152,6 +121,65 @@ public class HelloController {
         String val=inputField.getText();
         inputField.setText("");
     }
+
+    @FXML
+    protected void onPlusB(){
+        String inputText = inputField.getText();
+
+        if (!inputText.isEmpty()) {
+            try {
+                calc.setOp1(Double.parseDouble(inputText));
+                calc.setOperator('+');
+                inputField.clear();
+            } catch (NumberFormatException e) {
+                inputField.setText("Error: Invalid input");
+            }
+        }
+    }
+    @FXML
+    private void onMinusB() {
+        String inputText = inputField.getText();
+
+        if (!inputText.isEmpty()) {
+            try {
+                calc.setOp1(Double.parseDouble(inputText));
+                calc.setOperator('-');
+                inputField.clear();
+            } catch (NumberFormatException e) {
+                inputField.setText("Error: Invalid input");
+            }
+        }
+    }
+    @FXML
+    private void onMultiplyB() {
+        String inputText = inputField.getText();
+
+        if (!inputText.isEmpty()) {
+            try {
+                calc.setOp1(Double.parseDouble(inputText));
+                calc.setOperator('*');
+                inputField.clear();
+            } catch (NumberFormatException e) {
+                inputField.setText("Error: Invalid input");
+            }
+        }
+    }
+    @FXML
+    private void onDivideB() {
+        String inputText = inputField.getText();
+        if (!inputText.isEmpty()) {
+            try {
+                calc.setOp1(Double.parseDouble(inputText));
+                calc.setOperator('/');
+                inputField.clear();
+            } catch (NumberFormatException e) {
+                inputField.setText("Error: Invalid input");
+            }
+        }
+
+    }
+
+
 
 
 

@@ -8,20 +8,24 @@ public class Calculator {
 
 
 
-    public void calculate(){
+    public void calculate() throws DivisionByZeroEx {
         switch(this.operator){
 
             case'+':
                 this.result=this.op1+this.op2;
                 break;
-            case('-'):
+            case'-':
                 this.result=this.op1-this.op2;
                 break;
-            case('*'):
+            case'*':
                 this.result=this.op1*this.op2;
                 break;
-            case('/'):
-                this.result=this.op1/this.op2;
+            case'/':
+                if (op2 != 0) {
+                    this.result = op1 / op2;
+                } else {
+                    throw new DivisionByZeroEx("Cannot divide by zero.");
+                }
                 break;
         }
 

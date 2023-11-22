@@ -30,19 +30,19 @@
          <Button mnemonicParsing="false" onAction="#onOneB" prefHeight="26.0" prefWidth="79.0" text="1" />
          <Button mnemonicParsing="false" onAction="#onTwoB" prefHeight="26.0" prefWidth="78.0" text="2" GridPane.columnIndex="1" />
          <Button mnemonicParsing="false" onAction="#onThreeB" prefHeight="26.0" prefWidth="78.0" text="3" GridPane.columnIndex="2" />
-         <Button mnemonicParsing="false" onAction="#onPlusB" prefHeight="26.0" prefWidth="78.0" text="+" GridPane.columnIndex="3" />
          <Button mnemonicParsing="false" onAction="#onFourB" prefHeight="26.0" prefWidth="78.0" text="4" GridPane.rowIndex="1" />
          <Button mnemonicParsing="false" onAction="#onFiveB" prefHeight="26.0" prefWidth="79.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          <Button mnemonicParsing="false" onAction="#onSixB" prefHeight="26.0" prefWidth="79.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-         <Button mnemonicParsing="false" onAction="#onMinusB" prefHeight="26.0" prefWidth="78.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1" />
          <Button mnemonicParsing="false" onAction="#onSevenB" prefHeight="26.0" prefWidth="86.0" text="7" GridPane.rowIndex="2" />
          <Button mnemonicParsing="false" onAction="#onEightB" prefHeight="26.0" prefWidth="78.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          <Button mnemonicParsing="false" onAction="#onNineB" prefHeight="26.0" prefWidth="81.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-         <Button mnemonicParsing="false" onAction="#onMultiplyB" prefHeight="26.0" prefWidth="78.0" text="*" GridPane.columnIndex="3" GridPane.rowIndex="2" />
          <Button mnemonicParsing="false" onAction="#onClearB" prefHeight="26.0" prefWidth="80.0" text="C" GridPane.rowIndex="3" />
          <Button mnemonicParsing="false" onAction="#onZeroB" prefHeight="26.0" prefWidth="77.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
          <Button mnemonicParsing="false" onAction="#onEqualB" prefHeight="26.0" prefWidth="80.0" text="=" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-         <Button mnemonicParsing="false" onAction="#onDivisionB" prefHeight="26.0" prefWidth="87.0" text="/" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+         <Button mnemonicParsing="false" onAction="#onPlusB" prefHeight="26.0" prefWidth="45.0" text="+" GridPane.columnIndex="3" />
+         <Button mnemonicParsing="false" onAction="#onMinusB" prefHeight="26.0" prefWidth="45.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+         <Button mnemonicParsing="false" onAction="#onMultiplyB" prefHeight="26.0" prefWidth="45.0" text="*" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+         <Button mnemonicParsing="false" onAction="#onDivideB" prefHeight="26.0" prefWidth="46.0" text="/" GridPane.columnIndex="3" GridPane.rowIndex="3" />
       </children>
    </GridPane>
 </VBox>
